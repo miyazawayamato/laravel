@@ -34,9 +34,9 @@ jobs:
           paths:
             - ./vendor
             
-      - run: echo "APP_KEY=" > .envtest
-      - run: php artisan key:generate
-      - run: php artisan migrate
+      # - run: echo "APP_KEY=" > .envtest
+      # - run: php artisan key:generate
+      # - run: php artisan migrate
  
       - run: ./vendor/bin/phpunit
 

@@ -9,7 +9,8 @@ jobs:
           - DB_CONNECTION: test_mysql
           - DB_DATABASE: test
           - DB_USERNAME: root
- 
+          
+          
       - image: circleci/mysql:5.7-ram
         environment:
           - MYSQL_ALLOW_EMPTY_PASSWORD: true

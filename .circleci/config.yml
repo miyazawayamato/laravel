@@ -37,6 +37,7 @@ jobs:
       # - run: echo "APP_KEY=" > .envtest
       # - run: php artisan key:generate
       # - run: php artisan migrate
+      - run: php artisan cache:clear
  
       - run: ./vendor/bin/phpunit
 

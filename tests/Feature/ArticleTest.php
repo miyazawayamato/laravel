@@ -19,11 +19,10 @@ class ArticleTest extends TestCase
     public function test_show()
     {
         
-        User::factory()
-            ->has(Article::factory()->state(['title' => 'テストタイトル']))
-            ->create();
+        $user = User::factory()->create();
+        $article = Article::factory()->for($user)->create(['title' => 'テストタイトル']);
         
-        $response = $this->get('/show/article/1');
+        $response = $this->get('/show/article/'. $article->id);
         $response->assertStatus(200)->assertSee('テストタイトル');
     }
     
@@ -86,7 +85,7 @@ class ArticleTest extends TestCase
         $tag = Tag::factory()->create();
         $user = User::factory()->create();
         $article = Article::factory()->for($user)->create();
-        $response = $this->actingAs($user)->post('/edit/article', [
+        $response = $this->actingAs($user)->put('/edit/article', [
             'id' => $article->id,
             'title' => 'これはテストです',
             'body' => 'テストの本文です',

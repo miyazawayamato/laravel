@@ -24,7 +24,7 @@ class ProfTest extends TestCase
     public function test_name_edit()
     {
         $user = User::factory()->create();
-        $response = $this->actingAs($user)->post('/mypage/edit/name', [
+        $response = $this->actingAs($user)->put('/mypage/edit/name', [
             'name' => 'テストネーム',
         ]);
         $response->assertStatus(302);

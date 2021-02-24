@@ -1,0 +1,25 @@
+views/layouts/app.blade.php 親テンプレート
+
+app/Http/Controllers/Auth/RegisterController.php 新規登録
+$data['self_introduction']などの記載は、
+ビューファイル側のname属性と一致している必要がありますので注意してください。
+
+app/Http/Controllers/Auth/RegisterController.php
+app/Http/Controllers/Auth/LoginController.php
+app/Http/Controllers/Auth/ResetPasswordController.php
+の  protected $redirectTo = '/home';→ protected $redirectTo = '/';
+
+
+
+Rule::unique('users', 'email')->whereNot('email', $myEmail)
+
+SassCompiler::run("scss/", "css/");
+resources/sass/app.scss//ここにimport
+
+
+//デバッカー
+composer require barryvdh/laravel-debugbar
+APP_DEBUG=true
+
+Laravel-mix ・・ webpackのラッパー
+webpack ・・ CSSやJavaScriptなどを1つにまとめてくれる

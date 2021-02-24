@@ -1,0 +1,28 @@
+.preview, .original{
+        
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.preview {
+    display: none;
+}
+
+#toggle {
+    display: inline-block;
+}
+
+/* 768以上 */
+@media (min-width: 768px) {
+    
+    .preview, .original{
+        display: block;
+        width: 50%;
+    }
+    
+    #toggle {
+        display: none;
+    }
+    
+}

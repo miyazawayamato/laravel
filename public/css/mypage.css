@@ -1,0 +1,37 @@
+.mypage-main {
+    width: 80%;
+    margin: 0 auto !important;
+}
+
+.mypage-lists {
+    margin-top: 30px;
+}
+
+.delete-article-modal:hover, .delete-word-modal:hover {
+    
+    text-decoration: underline;
+    
+}
+
+
+/* 768以上 */
+@media (min-width: 768px) {
+    .mypage-main {
+        width: 100%;
+    }
+    
+    .lists-navi {
+        width: 25%;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    
+    .lists-navi {
+        width: 50%;
+        text-align: center;
+    }
+    
+}

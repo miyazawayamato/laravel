@@ -1,0 +1,18 @@
+レスポンスJSON に以下の値を含む
+$response->assertSee($user->name);
+$response->assertSee('<button class="btn btn-primary">このレッスンを予約する</button>', false);
+// HTMLタグ
+$response->assertSee('<title>タイトル</title>'); // OK
+$response->assertSeeText('<title>タイトル</title>'); // NG
+// テキスト
+$response->assertSee('タイトル'); // OK
+$response->assertSeeText('タイトル'); // OK
+
+レスポンスが指定したJSONの構造を持っている
+$response->assertJsonStructure(['title']); // キーのみをチェック
+
+# make() だとインスタンスのみ返す
+# create() だとデータベースに挿入してインスタンスを返す
+
+エラーログをシェルに
+$this->withoutExceptionHandling();

@@ -1,0 +1,27 @@
+.top-main {
+    width: 100%;
+    
+}
+
+.left, .right {
+    width: 90%;
+    margin: 0 auto;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+/* 768以上 */
+@media (min-width: 768px) {
+    
+    .top-main {
+        width: 90%;
+    }
+    .left, .right {
+        width: 90%;
+        margin: 0 auto;
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+    
+}
+

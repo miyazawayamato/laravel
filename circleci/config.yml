@@ -1,0 +1,40 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/8.0.1-fpm
+        environment:
+          - APP_DEBUG: true
+          - APP_ENV: testing
+          - DB_CONNECTION: test_mysql
+          - DB_DATABASE: test
+          - DB_USERNAME: root
+ 
+      - image: circleci/mysql:8.0.23
+        environment:
+          - MYSQL_ALLOW_EMPTY_PASSWORD: true
+          - MYSQL_DATABASE: test
+ 
+    steps:
+      - checkout
+ 
+      - run: sudo apt update
+      - run: sudo docker-php-ext-install pdo_mysql
+ 
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.json" }}
+            - v1-dependencies-
+ 
+      - run: composer install -n --prefer-dist
+ 
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
+            
+      - run: echo "APP_KEY=" > .envtest
+      - run: php artisan key:generate
+      - run: php artisan migrate
+ 
+      - run: ./vendor/bin/phpunit

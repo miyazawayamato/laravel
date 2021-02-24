@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/8.0.1-fpm
+      - image: circleci/php:7.1-node-browsers
         environment:
           - APP_DEBUG: true
           - APP_ENV: testing
@@ -10,7 +10,7 @@ jobs:
           - DB_DATABASE: test
           - DB_USERNAME: root
  
-      - image: circleci/mysql:8.0.23
+      - image: circleci/mysql:5.7-ram
         environment:
           - MYSQL_ALLOW_EMPTY_PASSWORD: true
           - MYSQL_DATABASE: test

@@ -10004,3 +10004,8 @@ h3 {
     border-color: #dee2e6;
   }
 }
+
+footer {
+  height: 50px;
+  text-align: center;
+}

@@ -34,10 +34,29 @@ jobs:
           paths:
             - ./vendor
             
-      # - run: echo "APP_KEY=" > .envtest
-      # - run: php artisan key:generate
       - run: php artisan migrate
  
       - run: ./vendor/bin/phpunit
+      
+  deploy:
+    machine:
+      image: circleci/classic:edge
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "84:○:○:○:○:○:○:○:○:○:○:○:○:○:○:bf"
+      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /usr/share/nginx/html/ && git pull origin master'
+      
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
 
 

@@ -21,7 +21,7 @@ use App\Http\Controllers\SearchController;
 |
 */
 
-
+//ホーム
 Route::get('/', [TopController::class, 'top'])->name('top');
 Route::get('/show/article/{id}', [ArticleController::class, 'show'])->name('show');
 Route::get('/user/{id}', [TopController::class, 'show'])->name('user');

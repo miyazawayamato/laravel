@@ -35,7 +35,6 @@ jobs:
             - ./vendor
             
       - run: php artisan migrate
-
       - run: ./vendor/bin/phpunit
       
   deploy:

@@ -35,7 +35,7 @@ class AjaxController extends Controller
     {
         $id = Auth::id();
         
-        //ユーザーIDを見つけて、そこから投稿を取得
+        //ユーザーIDを見つけ。そこから投稿を取得
         $articles = Article_like::where('user_id', $id)->get();
         
         foreach ($articles as $article) {

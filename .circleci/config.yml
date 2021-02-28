@@ -42,7 +42,7 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /usr/share/nginx/html/ && sudo git pull origin master'
+      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd /usr/share/nginx/html/project/laravel &&  git pull origin master'
       
 workflows:
   version: 2

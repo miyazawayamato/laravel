@@ -2,12 +2,13 @@
 
 @section('title', '記事')
 @section('stylesheet')
+<link rel="stylesheet" href="{{ asset('css/newarticle.css') }}"/>
 @endsection
 
 @section('main')
-<div class="mx-auto my-5 p-5 border" style="width: 80%;">
+<div class="mx-auto my-5 p-md-5 p-2 border article-side" >
   <a href="{{route('user', [$article->user->account])}}" class="link-success" style="cursor: pointer">{{$article->user->name}}</a>
-  <span>{{$article->created_at}}</span>
+  <span class="d-md-inline d-block">{{$article->created_at}}</span>
   @auth
     @if(!empty($article->like_check($article->id)))
       <i class="far fa-star text-warning article" data-aid="{{$article->id}}"></i>

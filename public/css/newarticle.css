@@ -5,6 +5,11 @@
     
 }
 
+.article-side {
+    
+    width: 95%;
+}
+
 .preview {
     display: none;
 }
@@ -23,6 +28,11 @@
     
     #toggle {
         display: none;
+    }
+    
+    .article-side {
+        
+        width: 80%;
     }
     
 }

@@ -6,9 +6,13 @@
 .left, .right {
     width: 90%;
     margin: 0 auto;
+}
+
+.scr {
     max-height: 400px;
     overflow-y: scroll;
 }
+
 
 /* 768以上 */
 @media (min-width: 768px) {
@@ -19,8 +23,9 @@
     .left, .right {
         width: 90%;
         margin: 0 auto;
+    }
+    .scr {
         max-height: 600px;
-        overflow-y: scroll;
     }
     
 }

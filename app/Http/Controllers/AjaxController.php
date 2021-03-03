@@ -12,7 +12,6 @@ use App\Models\Word_like;
 
 class AjaxController extends Controller
 {
-    //
     
     public function article()
     {

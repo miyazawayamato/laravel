@@ -32,10 +32,10 @@ Route::get('/search/{tagid}', [SearchController::class, 'tag'])->name('t.search'
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('homes');
 
 require __DIR__.'/auth.php';
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('homes');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     //マイページ
@@ -78,7 +78,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/tag/add', [TagController::class, 'add']);
     //タグ取得
     Route::get('/tag/list', [TagController::class, 'list']);
-    //マークダウンプレビュー
     
 });
 

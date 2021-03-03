@@ -13,7 +13,7 @@
         <button type="button" data-toggle="modal" data-target="#searchTagModal" class="btn btn-primary ml-2" >他のタグ</button>
     </div>
     <div class="mt-3">
-        @if ($count > 0))
+        @if ($count > 0)
             @foreach ($articles as $article)
             <div class="border" style="width: 100%;">
                 <div style="width: 100%;">

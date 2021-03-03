@@ -1,6 +1,6 @@
 @extends('common')
 
-@section('title', '記事投稿')
+@section('title', '記事編集')
 @section('stylesheet')
 <link rel="stylesheet" href="{{ asset('css/newarticle.css') }}"/>
 @endsection

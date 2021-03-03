@@ -6,7 +6,7 @@
 
 @section('main')
 <div class="mx-auto my-5 p-5 border" style="width: 80%;">
-  <span>{{$article->user->name}}</span>
+  <a href="{{route('user', [$article->user->account])}}" class="link-success" style="cursor: pointer">{{$article->user->name}}</a>
   <span>{{$article->created_at}}</span>
   @auth
     @if(!empty($article->like_check($article->id)))

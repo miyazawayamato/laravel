@@ -25,7 +25,7 @@ class WordFactory extends Factory
         return [
             //
             'title' => $this->faker->sentence,
-            'body' => $this->faker->text,
+            'body' => $this->faker->realText(25),
         ];
     }
 }

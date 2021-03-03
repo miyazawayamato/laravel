@@ -12,7 +12,11 @@
     
     <div class="card col-md-3 pt-3 mr-md-2" >
       <div class="p-3">
-        <img src="{{ asset('image/no_image_yoko.jpg') }}" class="card-img-top px-2" alt="">
+        @if (!empty($user->iamgepass))
+          <img src="{{ asset(Storage::url($user->imagepass)) }}" class="card-img-top px-2">
+        @else
+          <img src="{{ asset('common/no_image_yoko.jpg') }}" class="card-img-top px-2" >
+        @endif
       </div>
         <div class="card-header p-0">
             <p class="m-0 text-center">ユーザーデータ</p>

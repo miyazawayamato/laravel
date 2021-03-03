@@ -18,19 +18,7 @@ class TopController extends Controller
         
         $articles = Article::latest()->take(20)->get();;
         $words = Word::latest()->take(20)->get();
-        
-        // $article_like = array();
-        // $word_like = array();
-        
-        // $alikes = Article_like::where('user_id', '1')->get();
-        // foreach ($alikes as $alike) {
-        //     $article_like[] = $alike->article_id;
-        // }
-        
-        // $wlikes = Word_like::where('user_id', '1')->get();
-        // foreach ($wlikes as $wlike) {
-        //     $word_like[] = $wlike->word_id;
-        // }
+    
         
         
         return view('top', [

@@ -20,5 +20,8 @@ class DatabaseSeeder extends Seeder
         User::factory()
             ->has(Word::factory()->count(3))
             ->create();
+        User::factory()
+            ->has(Article::factory()->count(3))
+            ->create();
     }
 }

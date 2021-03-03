@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Word;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class WordFactory extends Factory
 {

@@ -5,8 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">ログイン</div>
-
+                <div class="card-header">
+                    ログイン
+                </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -56,17 +57,27 @@
                                 <button type="submit" class="btn btn-primary">
                                     ログイン
                                 </button>
-
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        パスワードを忘れた
-                                    </a>
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    パスワードを忘れた
+                                </a> --}}
                                 @endif
+                                
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+            <form method="POST" action="{{ route('login') }}" >
+                @csrf
+                <input type="hidden" class="form-control" name="email" value="testuser@test.com" required >
+                <input type="hidden" class="form-control" name="password" required value="testuser12345">
+                <div class="align-center">
+                    <button type="submit" class="btn btn-success mt-2">
+                        テストユーザーログイン
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

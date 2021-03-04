@@ -72,7 +72,7 @@
                 @csrf
                 <input type="hidden" class="form-control" name="email" value="testuser@test.com" required >
                 <input type="hidden" class="form-control" name="password" required value="testuser12345">
-                <div class="align-center">
+                <div class="text-center">
                     <button type="submit" class="btn btn-success mt-2">
                         テストユーザーログイン
                     </button>

@@ -14,14 +14,12 @@ $(function(){
             
             num = it.data('aid');
             
-            // url = 'http://localhost/my-laravel/project/public/like/article ';
-            url = 'http://35.72.100.242/site/laravel/public/like/article ';
+            url = '../../like/article ';
             
         } else if (it.hasClass('word')) {
             
             num = it.data('wid');
-            // url = 'http://localhost/my-laravel/project/public/like/word ';
-            url = 'http://35.72.100.242/site/laravel/public/like/word ';
+            url = '../like/word ';
         } else {
             return false;
         }

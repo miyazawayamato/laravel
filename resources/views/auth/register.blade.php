@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <p>新規登録</p>
+                    <p class="text-danger m-0">新規登録は制限しています</p>
                     <p class="text-danger">テストユーザを用意しているので、そちらでログインしてください</p>
                 </div>
                 <div class="card-body">
@@ -78,7 +79,7 @@
                         
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="button" class="btn btn-primary">
                                     登録
                                 </button>
                             </div>
@@ -86,6 +87,16 @@
                     </form>
                 </div>
             </div>
+            <form method="POST" action="{{ route('login') }}" >
+                @csrf
+                <input type="hidden" class="form-control" name="email" value="testuser@test.com" required >
+                <input type="hidden" class="form-control" name="password" required value="testuser12345">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success mt-2">
+                        テストユーザーログイン
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

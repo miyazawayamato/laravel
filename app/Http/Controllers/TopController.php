@@ -16,8 +16,8 @@ class TopController extends Controller
     public function top() 
     {
         
-        $articles = Article::latest()->take(20)->get();;
-        $words = Word::latest()->take(20)->get();
+        $articles = Article::latest()->take(20)->with('user')->get();;
+        $words = Word::latest()->take(20)->with('user')->get();
     
         
         

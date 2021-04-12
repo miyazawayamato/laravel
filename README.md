@@ -2,7 +2,7 @@
 
 ### アプリ概要
 記事投稿（markdown）機能に加え、単語投稿機能も追加しました。  
-[サイトへ移動](https://miyazawayamato.github.io/portfolio-home/)
+[サイトへ移動](http://35.72.100.242/site/laravel/public/index.php)
 
 ### アプリ機能
 記事、単語のCRUD機能  

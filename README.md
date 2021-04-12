@@ -1,7 +1,7 @@
 ## qiita風の記事投稿サイト
 
 ### アプリ概要
-記事投稿（markdown）機能に加え、単語投稿機能も追加しました。
+記事投稿（markdown）機能に加え、単語投稿機能も追加しました。  
 [サイトへ移動](https://miyazawayamato.github.io/portfolio-home/)
 
 ### アプリ機能

@@ -56,7 +56,9 @@ class ProfController extends Controller
             'imagepass' => ['file', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2000', 'required']
         ]);
         
-        $path = $request->file('imagepass')->store('public/images');
+        // $path = $request->file('imagepass')->store('public/images');
+        $path = $request->file('imagepass')->store('profimage', 's3');
+        
         $user = User::findOrFail($id);
         $user->imagepass = $path;
         $user->save();

@@ -15,7 +15,10 @@
       @if (empty($user->imagepass))
         <img src="{{ asset('common/no_image_yoko.jpg') }}" class="card-img-top px-2">
       @else 
+      {{-- http://35.72.100.242/site/laravel/public/storage/profimage/SuCA9Cji9BrDvDToQ0py3OLfJTdfOm4UDBnsfYcS.png --}}
         <img src="{{ asset(Storage::url($user->imagepass)) }}" class="card-img-top px-2">
+        <img src="{{ asset(Storage::disk('s3')->url($user->imagepass)) }}" class="card-img-top px-2">
+        {{-- profimage/SuCA9Cji9BrDvDToQ0py3OLfJTdfOm4UDBnsfYcS.png --}}
         <img src="{{ $user->imagepass }}" class="card-img-top px-2">
       @endif
     </div>

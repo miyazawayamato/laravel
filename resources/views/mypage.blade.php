@@ -15,7 +15,7 @@
       @if (empty($user->imagepass))
         <img src="{{ asset('common/no_image_yoko.jpg') }}" class="card-img-top px-2">
       @else 
-      {{-- <img src="{{ asset(Storage::url($user->imagepass)) }}" class="card-img-top px-2"> --}}
+        <img src="{{ asset(Storage::url($user->imagepass)) }}" class="card-img-top px-2">
         <img src="{{ $user->imagepass }}" class="card-img-top px-2">
       @endif
     </div>

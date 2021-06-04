@@ -14,6 +14,9 @@ return [
     */
 
     'default' => env('FILESYSTEM_DRIVER', 'local'),
+    
+    //追記
+    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
     /*
     |--------------------------------------------------------------------------

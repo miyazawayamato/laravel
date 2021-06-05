@@ -66,7 +66,7 @@ class ProfController extends Controller
         //現在のあるなら削除
         if (!empty($request->curimage)) {
             
-            Storage::delete($request->curimage);
+            Storage::disk('s3')->delete($request->curimage);
         }
         
         return redirect()->route('p.edit');
@@ -79,7 +79,7 @@ class ProfController extends Controller
         //現在のあるなら削除
         if (!empty($request->curimage)) {
             
-            Storage::delete($request->curimage);
+            Storage::disk('s3')->delete($request->curimage);
             $user = User::findOrFail($id);
             $user->imagepass = NULL;
             $user->save();

@@ -19,4 +19,4 @@ ajaxで取得
 デザイン：bootstrap  
 開発環境：docker xampp  
 テスト：circleci  
-デプロイ：aws(ec2,rds)  
+デプロイ：aws(ec2,rds,s3,elasticcache)  
